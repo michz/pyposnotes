@@ -1,0 +1,3 @@
+[submodule "python-escpos"]
+	path = python-escpos
+	url = https://github.com/manpaz/python-escpos.git
