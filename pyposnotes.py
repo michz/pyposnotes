@@ -62,9 +62,11 @@ def printStdin(p, border):
 
 # init argument parser
 parser = argparse.ArgumentParser(description="Print some notes on an ESC/POS printer.")
-parser.add_argument("--tty", nargs=1, default="/dev/ttyUSB0")
+parser.add_argument("--tty", nargs=1, default="/dev/ttyUSB0",
+                    help="The serial tty device the printer is connected to.")
 parser.add_argument("-i", "--interactive", action="store_const",
-                    const=1, default=0)
+                    const=1, default=0,
+                    help="Interactive mode. Asks for details interactively.")
 args = parser.parse_args()
 print "Called this program with arguments: "
 print args
